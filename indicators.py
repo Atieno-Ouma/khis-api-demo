@@ -3,7 +3,10 @@ import requests
 import re
 import csv
 
+from flask import Flask
 
+app = Flask(__name__)
+@app.route("/")
 class Indicators:
     username = os.environ.get('DHIS2_USER')
     password = os.environ.get('DHIS2_PASS')
@@ -78,6 +81,8 @@ class Indicators:
 
 
 if __name__ == '__main__':
+
+    app.run(host="127.0.0.1", port=8080, debug=True)
     indicators = Indicators()
     # receives indicator group as uid
     print(indicators.indicator_group_metadata('LfgaY9O4EP8'))

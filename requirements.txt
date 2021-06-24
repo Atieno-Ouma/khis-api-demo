@@ -1,0 +1,9 @@
+pip~=21.1.2
+wheel~=0.36.2
+cryptography~=3.4.6
+py~=1.5.3
+lxml~=4.6.2
+tornado~=6.1
+setuptools~=56.0.0
+requests~=2.25.1
+Flask~=1.0.2
